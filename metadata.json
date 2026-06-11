@@ -1,0 +1,6 @@
+{
+  "name": "Warsztat Kujawski",
+  "description": "Profesjonalny serwis rowerów tradycyjnych, zabytkowych, e-bike i wyczynowych we Włocławku, inspirowany sztuką ludową Kujaw.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lato: "Lato", sans-serif;
+  --font-merriweather: "Merriweather", serif;
+  --font-mono: "Roboto Mono", monospace;
+
+  --color-brand-bg: #F7F9FC;
+  --color-brand-blue: #1A5FA8;
+  --color-brand-deep: #0D3D70;
+  --color-brand-light: #4A8FD4;
+  --color-brand-accent: #D6E8F7;
+  --color-brand-dark: #1A1E24;
+  --color-brand-red: #C0392B;
+  --color-brand-yellow: #E8B84B;
+  --color-brand-gray: #5A6A7A;
+  --color-brand-lightgray: #E4EBF0;
+  --color-brand-muted: #7A8A9A;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-merriweather);
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-dark);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom scroll reveal rules */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.border-reveal {
+  width: 0%;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.border-reveal.revealed {
+  width: 100%;
+}
