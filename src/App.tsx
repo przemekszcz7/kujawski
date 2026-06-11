@@ -377,7 +377,7 @@ export default function App() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-brand-bg text-brand-dark selection:bg-brand-accent selection:text-brand-deep font-merriweather">
+    <div className="relative min-h-screen bg-brand-bg text-brand-dark selection:bg-brand-accent selection:text-brand-deep font-merriweather overflow-x-hidden">
       
       {/* ==========================================================
          NAVIGATION HEADER (FIXED)
@@ -454,7 +454,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-white pt-24 px-6 flex flex-col justify-start gap-6 border-b-6 border-brand-blue"
+            className="fixed inset-0 z-40 bg-white pt-24 px-6 flex flex-col justify-start gap-6 border-b-6 border-brand-blue overflow-y-auto overflow-x-hidden"
             id="mobile-nav"
           >
             {/* Folk Watermark inside overlay */}
@@ -545,10 +545,10 @@ export default function App() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="flex flex-col items-center mb-4"
           >
-            <h1 className="font-lato font-light tracking-[0.22em] text-brand-light text-2xl sm:text-3xl md:text-4xl leading-none uppercase">
+            <h1 className="font-lato font-light tracking-[0.22em] text-brand-blue text-2xl sm:text-3xl md:text-4xl leading-none uppercase">
               WARSZTAT
             </h1>
-            <h2 className="font-lato font-black text-5xl sm:text-7xl md:text-9xl tracking-tighter text-brand-accent leading-none uppercase">
+            <h2 className="font-lato font-black text-5xl sm:text-7xl md:text-9xl tracking-tighter text-brand-light leading-none uppercase">
               KUJAWSKI
             </h2>
           </motion.div>
@@ -568,7 +568,7 @@ export default function App() {
             initial={{ opacity: 0, y: 15 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-2xl font-merriweather font-light italic text-base sm:text-lg md:text-xl text-brand-accent/90 leading-relaxed mb-10"
+            className="max-w-2xl font-merriweather font-light italic text-base sm:text-lg md:text-xl text-brand-light/95 leading-relaxed mb-10"
           >
             "Serwis rowerów tradycyjnych, zabytkowych, e-bike i wyczynowych. Z pasją do dwóch kółek i Kujaw."
           </motion.p>
@@ -591,7 +591,7 @@ export default function App() {
             
             <a 
               href="#usługi" 
-              className="w-full sm:w-auto px-8 py-3.5 border-2 border-brand-accent text-brand-accent hover:bg-brand-accent/10 font-lato font-bold tracking-wide text-sm uppercase rounded-[30px] transition-all duration-300 flex items-center justify-center"
+              className="w-full sm:w-auto px-8 py-3.5 border-2 border-brand-light text-brand-light hover:bg-brand-light/10 font-lato font-bold tracking-wide text-sm uppercase rounded-[30px] transition-all duration-300 flex items-center justify-center"
               id="cta-services"
             >
               ZAKRES USŁUG
@@ -605,10 +605,10 @@ export default function App() {
             transition={{ delay: 0.7 }}
             className="mt-8 flex flex-col items-center sm:flex-row gap-2"
           >
-            <span className="font-lato font-semibold text-xs tracking-widest text-brand-accent/70 uppercase">ZADZWOŃ TERAZ:</span>
+            <span className="font-lato font-semibold text-xs tracking-widest text-brand-light/80 uppercase">ZADZWOŃ TERAZ:</span>
             <a 
               href="tel:605959497" 
-              className="font-mono text-brand-accent text-base font-bold hover:text-white transition flex items-center gap-1.5 underline underline-offset-4 decoration-brand-accent/40 decoration-2"
+              className="font-mono text-brand-light text-base font-bold hover:text-white transition flex items-center gap-1.5 underline underline-offset-4 decoration-brand-light/40 decoration-2"
             >
               <Phone className="w-4 h-4" />
               605 959 497
@@ -728,7 +728,7 @@ export default function App() {
       {/* ==========================================================
          SERVICES (USŁUGI) SECTION
          ========================================================== */}
-      <section id="usługi" className="relative py-24 bg-brand-bg scroll-mt-14">
+      <section id="usługi" className="relative py-24 bg-brand-bg scroll-mt-14 overflow-hidden">
         {/* Soft background watermark */}
         <div className="absolute top-1/2 left-1/2 z-0 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] pointer-events-none">
           <FolkWheel size={600} color="#1A5FA8" />
@@ -936,7 +936,7 @@ export default function App() {
       {/* ==========================================================
          CONTACT (KONTAKT) SECTION
          ========================================================== */}
-      <section id="kontakt" className="relative py-24 bg-brand-bg scroll-mt-14">
+      <section id="kontakt" className="relative py-24 bg-brand-bg scroll-mt-14 overflow-hidden">
         {/* Dynamic folk border at the top of contact */}
         <div className="absolute top-0 left-0 right-0 z-10 w-full">
           <FolkBorderBand variant="blue-on-white" />
